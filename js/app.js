@@ -73,17 +73,15 @@ function buscartext($event) {
                          let bold = element.view.toLowerCase()
                          let text = bold.split(texto_buscar.toLowerCase());
                          let pa = ""
-                         let a = 0
+
                          for (let it = 0; it < text.length; it++) {
-                            const element = text[it];
                             if(it+1 == text.length){
                                 pa = pa+""+text[it]
                             }else{
-                                pa = pa+""+text[it]+"<b>"+texto_buscar+"</b>"
+                                pa = pa+""+text[it]+"<b>"+texto_buscar.toLowerCase()+"</b>"
                             }
                          }
-
-                         console.log(pa)
+                        
                          html = html + "<a href=" + element.url + "><li>"+pa+"</li></a>";
                     });
                     document.getElementById("autocom_box").innerHTML = html
