@@ -113,6 +113,7 @@ body{
     height: 15px;
     position: absolute;
     top: 11px;
+    left: 10px;
 }
 .icon_lens{
     background-image: url(../images/lens_gray.svg);

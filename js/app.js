@@ -68,8 +68,13 @@ function buscartext($event) {
                 })
                 if(list.length > 0){
                     let html = "";
+
                     list.forEach(element => {
-                        html = html + "<a href=" + element.url + "><li >" + element.view + "</li></a>";
+                         let bold = element.view.toUpperCase()
+                         let text = bold.split(texto_buscar.toUpperCase());
+                         let antes  = text[0].toLowerCase();
+                         let depues  = text[1]?text[1].toLowerCase():""
+                        html = html + "<a href=" + element.url + "><li >" +antes+"<b>"+texto_buscar+"</b>"+depues+ "</li></a>";
                     });
                     document.getElementById("autocom_box").innerHTML = html
                 }else{
@@ -112,12 +117,6 @@ $.ajax({
                 } else {
                     fnok(data);
                 }
-            } else {
-                swal.fire(
-                    data.mensaje,
-                    '',
-                    'warning',
-                )
             }
         } else {
 			console.log("La palabra ya existe ")
