@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>   
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <title>Document</title>
+        <link href="./css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="menu-movistar list_button">
+            <span class="icon_lens active"></span>
+        </div>
+        <div class="container_all" style="display:none;">
+            <form class="content_searcher">
+                <div class="content_images">
+                    <img src="./images/logo_movistar.svg" alt="">
+                </div>
+                <div class="container_input">
+                    <select id="select" onchange="buscartext()">
+                        <option value="">Todos</option>
+                        <option>Celulares</option>
+                        <option>Tecnologia y accesorios</option>
+                        <option>Financiacion</option>
+                        <option>Hogar</option>
+                        <option>Movil</option>
+                        <option>Entretenimiento</option>
+                        <option>Ayuda</option>
+                    </select>
+                <div class="input-wrapper">
+                    <span class="icon_arrow active"></span>
+                    <input  type="search"  placeholder="¿Qué buscas hoy en movistar.co?"  autocomplete="off" onfocus="buscador()" onkeyup="buscartext()" id="texto">
+                    <div class="autocom_box" id="autocom_box">
+                    </div>
+                </div>
+            </div>
+                <div class="content_images active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.15 15.15"><defs></defs><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><line class="cls-1" x1="0.27" y1="0.27" x2="14.88" y2="14.88"/><line class="cls-1" x1="14.88" y1="0.27" x2="0.27" y2="14.88"/></g></g></svg>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="./js/app.js"></script>
+    <script src="./js/style.js"></script>
+</html>
