@@ -128,7 +128,6 @@ body{
     right: 0;
     top: 0;
     width: 100%;
-    max-width: 500px;
     margin: auto;
     background-color: #fff;
     border-radius: 4px;
@@ -141,6 +140,7 @@ body{
     cursor: default;
     display: none;
     position: relative;
+    color: #0c2739;
 }
 .input-wrapper li:hover{
     background-color: #efefef;
@@ -188,21 +188,24 @@ body{
 .input-wrapper.active2 .autocom_box li{
     display: block;
 }
+.input-wrapper.active2 .autocom_box a{
+    color: #313235;
+}
 
 @media only screen and (min-width: 768px) {
     .container_input{
-        display: grid;
-        grid-template-columns: 16% 84%;
+        display: flex;
     }
     .container_input select{
         display: block;
         height: 40px;
+        width: 16%;
         border-radius: 4px 0 0 4px;
         background: #f6f6f6; 
         background-image: url(../images/Arrow-down.png);
         background-repeat: no-repeat;
-        background-position: 60px center;
-        background-size: 14px;
+        background-position: 74px center;
+        background-size: 9px;
         border: 0;
         border-left: 1px solid #dedede;
         padding: 5px;
@@ -211,9 +214,9 @@ body{
 	   -webkit-appearance: none;
 	   -moz-appearance: none;
        text-align: center;
+       position: relative;
     }
    
-
    .content_searcher{
     display: grid;
     position: fixed;
@@ -269,4 +272,9 @@ transform: translateY(-50%);
 .content_searcher img{
    display: block;
 }
+}
+@media only screen and (min-width: 1024px) {
+    .content_searcher{
+        grid-template-columns: 28% 44% 28%;
+    }
 }
