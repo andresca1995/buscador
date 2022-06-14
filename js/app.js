@@ -23,6 +23,28 @@ function buscador() {
                     document.getElementById("autocom_box").innerHTML = html
                 }
             });
+        }else{
+            $.ajax({
+                type: "GET", 
+                url: "../json/hot.min.json",
+                success: function (data) {
+                    let html = $("#autocom_box").html();
+                    let select = $("#select").val();
+                    data.forEach(element => {
+                        if (!select) {
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                        }else{
+                            if (element.Categoria  == select) {
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                                
+                            }
+                        }
+                    })
+                    searchWrapper.classList.add('active2')
+                    document.getElementById("autocom_box").innerHTML = html
+
+                }
+            });
         }
     })
 }
@@ -95,6 +117,7 @@ function buscartext($event) {
 	                    })						
 					}
                     document.getElementById("autocom_box").innerHTML = `<div class='camp_error'><img src="../images/img_error.webp"><div> No se encontraron resultados para "<b>${texto_buscar}</b>"<br><small>Quizás te interesen las siguientes busquedas</small></div></div><hr>`;
+                    buscador()                    
                 }
             }
         })
