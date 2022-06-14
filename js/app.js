@@ -94,7 +94,7 @@ function buscartext($event) {
 												
 	                    })						
 					}
-                    document.getElementById("autocom_box").innerHTML = `No se encontraron resultados para "<b>${texto_buscar}</b>"`;
+                    document.getElementById("autocom_box").innerHTML = `<div class='camp_error'><img src="../images/img_error.webp"><div> No se encontraron resultados para "<b>${texto_buscar}</b>"<br><small>Quizás te interesen las siguientes busquedas</small></div></div><hr>`;
                 }
             }
         })

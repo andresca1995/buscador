@@ -140,9 +140,21 @@ body{
     width: 100%;
     cursor: default;
     display: none;
+    position: relative;
 }
 .input-wrapper li:hover{
     background-color: #efefef;
+}
+.input-wrapper li::before{
+    content: url(../images/lens_gray.png);
+    width: 20px;
+    margin-right: 10px;
+}
+.input-wrapper li::after{
+    content: url(../images/arrow_gray.png);
+    width: 20px;
+    position: absolute;
+    right: 0;
 }
 .input-wrapper .autocom_box{
     padding: 0;
@@ -150,6 +162,17 @@ body{
     overflow-y: auto;
     opacity: 0;
 }
+.autocom_box .camp_error{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 16px;
+   padding-bottom: 10px;
+}
+.autocom_box .camp_error img{
+  width: 30px;
+  margin: 0;
+ }
 .content_images{
     display: none;
 }
