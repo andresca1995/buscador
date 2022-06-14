@@ -194,7 +194,12 @@ body{
 
 @media only screen and (min-width: 768px) {
     .container_input{
+<<<<<<< HEAD
         display: flex;
+=======
+        display: grid;
+        grid-template-columns: 20% 80%;
+>>>>>>> 9eabf906cd37b7e53604ddd002c1dc755e34bd76
     }
     .container_input select{
         display: block;
@@ -204,8 +209,13 @@ body{
         background: #f6f6f6; 
         background-image: url(../images/Arrow-down.png);
         background-repeat: no-repeat;
+<<<<<<< HEAD
         background-position: 74px center;
         background-size: 9px;
+=======
+        background-position: right;
+        background-size: 14px;
+>>>>>>> 9eabf906cd37b7e53604ddd002c1dc755e34bd76
         border: 0;
         border-left: 1px solid #dedede;
         padding: 5px;
