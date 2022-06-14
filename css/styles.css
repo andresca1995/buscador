@@ -192,17 +192,27 @@ body{
 @media only screen and (min-width: 768px) {
     .container_input{
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 16% 84%;
     }
     .container_input select{
         display: block;
         height: 40px;
         border-radius: 4px 0 0 4px;
-        background: #f6f6f6;
+        background: #f6f6f6; 
+        background-image: url(../images/Arrow-down.png);
+        background-repeat: no-repeat;
+        background-position: 60px center;
+        background-size: 14px;
         border: 0;
         border-left: 1px solid #dedede;
         padding: 5px;
+        position: relative;
+        appearance: none;
+	   -webkit-appearance: none;
+	   -moz-appearance: none;
+       text-align: center;
     }
+   
 
    .content_searcher{
     display: grid;
@@ -223,7 +233,7 @@ body{
     background-image: url('../images/lens_blue.svg');
     background-repeat: no-repeat;
     background-position: 10px center;
-    background-size: 20px;
+    background-size: 17px;
 }
 .content_searcher input::-webkit-search-cancel-button{
     background-image: url(../images/close_blue.svg);
