@@ -192,7 +192,7 @@ body{
 @media only screen and (min-width: 768px) {
     .container_input{
         display: grid;
-        grid-template-columns: 16% 84%;
+        grid-template-columns: 20% 80%;
     }
     .container_input select{
         display: block;
@@ -201,7 +201,7 @@ body{
         background: #f6f6f6; 
         background-image: url(../images/Arrow-down.png);
         background-repeat: no-repeat;
-        background-position: 60px center;
+        background-position: right;
         background-size: 14px;
         border: 0;
         border-left: 1px solid #dedede;
