@@ -24,16 +24,19 @@
                     <img src="./images/logo_movistar.svg" alt="">
                 </div>
                 <div class="container_input">
-                    <select id="select" onchange="buscartext()">
-                        <option value="">Todos</option>
-                        <option>Celulares</option>
-                        <option>Tecnologia y accesorios</option>
-                        <option>Financiacion</option>
-                        <option>Hogar</option>
-                        <option>Movil</option>
-                        <option>Entretenimiento</option>
-                        <option>Ayuda</option>
-                    </select>
+                    <div class="content_select">
+                        <select id="select" onchange="buscartext()">
+                            <option value="">Todos</option>
+                            <option>Celulares</option>
+                            <option>Tecnologia y accesorios</option>
+                            <option>Financiacion</option>
+                            <option>Hogar</option>
+                            <option>Movil</option>
+                            <option>Entretenimiento</option>
+                            <option>Ayuda</option>
+                        </select>
+                        <span class="content_textSelect">Todos</span>
+                    </div>
                 <div class="input-wrapper">
                     <span class="icon_arrow active"></span>
                     <input  type="search"  placeholder="¿Qué buscas hoy en movistar.co?"  autocomplete="off" onfocus="buscador()" onkeyup="buscartext()" id="texto">
