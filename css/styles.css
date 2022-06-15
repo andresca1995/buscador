@@ -271,7 +271,8 @@ body {
   }
   .input-wrapper {
     position: initial;
-    width: 90%;
+    width: 88%;
+    margin: 0;
   }
   .content_images {
     display: flex;
