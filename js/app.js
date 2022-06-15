@@ -50,6 +50,7 @@ function buscador() {
 }
 //Buscador para los que estan tecleando
 function buscartext($event) {
+    $("#lblselect").text($("#select").val())
     //valida el select
     let select = $("#select").val();
 
