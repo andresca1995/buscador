@@ -7,10 +7,9 @@ $(document).ready(function() {
   /* var contentLastMarginLeft = 0; */
   $(".active").click(function() {
      $(".container_all").toggle();
-   
+     document.getElementById("texto").focus();
    /*  box.animate({
       "margin-left": newValue
     }, 2000); */
   });
 });
-    
