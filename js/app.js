@@ -11,10 +11,10 @@ function buscador() {
                     let select = $("#select").val();
                     data.forEach(element => {
                         if (!select) {
-                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto.toUpperCase() + "</a></li>";
                         }else{
                             if (element.Categoria  == select) {
-                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto.toUpperCase() + "</a></li>";
                                 
                             }
                         }
@@ -32,10 +32,10 @@ function buscador() {
                     let select = $("#select").val();
                     data.forEach(element => {
                         if (!select) {
-                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto.toUpperCase() + "</a></li>";
                         }else{
                             if (element.Categoria  == select) {
-                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto + "</a></li>";
+                                    html = html + "<li class='cols'><a href=" + element.url + ">" + element.texto.toUpperCase() + "</a></li>";
                                 
                             }
                         }
@@ -93,15 +93,15 @@ function buscartext($event) {
                     let html = "";
 
                     list.forEach(element => {
-                         let bold = element.view.toLowerCase()
-                         let text = bold.split(texto_buscar.toLowerCase());
+                         let bold = element.view.toUpperCase()
+                         let text = bold.split(texto_buscar.toUpperCase());
                          let pa = ""
 
                          for (let it = 0; it < text.length; it++) {
                             if(it+1 == text.length){
                                 pa = pa+""+text[it]
                             }else{
-                                pa = pa+""+text[it]+"<b>"+texto_buscar.toLowerCase()+"</b>"
+                                pa = pa+""+text[it]+"<b>"+texto_buscar.toUpperCase()+"</b>"
                             }
                          }
                         
