@@ -4,9 +4,8 @@ var nohay = false;
 function buscador() {
     let texto_buscar = document.getElementById("texto").value;
         let select = $("#select").val();
-        
-    $.getJSON("../json/hot.min.json", function (json) {
         let url = geturl()
+    $.getJSON("../json/hot.min.json", function (json) {
         if (!texto_buscar) {
             $.ajax({
                 type: "GET",
@@ -20,7 +19,6 @@ function buscador() {
                         } else {
                             if (element.Categoria == select) {
                                 html = html + "<li class='cols'><a href=" + element.url + ">" + mayus + "</a></li>";
-
                             }
                         }
                     })
@@ -31,7 +29,7 @@ function buscador() {
         } else {
             $.ajax({
                 type: "GET",
-                url: "../json/hot.min.json",
+                url: url,
                 success: function (data) {
                     let html = $("#autocom_box").html();
                     let select = $("#select").val();
@@ -165,6 +163,12 @@ function geturl(){
         let ulr  =""
         let select = $("#select").val();
         if (!texto_buscar) {
+            if (!select) {
+                ulr = '../json/hot.min.json'
+            } else {
+                ulr = '../json/all.min.json'
+            }
+        }else{
             if (!select) {
                 ulr = '../json/hot.min.json'
             } else {
