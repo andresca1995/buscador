@@ -2,17 +2,19 @@ var nohay = false;
 //Buscador de los que estan por defecto
 
 function buscador() {
+    let texto_buscar = document.getElementById("texto").value;
+        let select = $("#select").val();
+        
     $.getJSON("../json/hot.min.json", function (json) {
-        let texto_buscar = document.getElementById("texto").value;
+        let url = geturl()
         if (!texto_buscar) {
             $.ajax({
                 type: "GET",
-                url: "../json/hot.min.json",
+                url: url,
                 success: function (data) {
                     let html = "";
-                    let select = $("#select").val();
                     data.forEach(element => {
-                        let mayus = element.texto.charAt(0).toUpperCase() + element.texto.slice(1);
+                        let mayus = element.view.charAt(0).toUpperCase() + element.view.slice(1);
                         if (!select) {
                             html = html + "<li class='cols'><a href=" + element.url + ">" + mayus + "</a></li>";
                         } else {
@@ -35,7 +37,7 @@ function buscador() {
                     let select = $("#select").val();
                     if (nohay) {
                         data.forEach(element => {
-                            let mayus = element.texto.charAt(0).toUpperCase() + element.texto.slice(1);
+                            let mayus = element.view.charAt(0).toUpperCase() + element.view.slice(1);
                             if (!select) {
                                 html = html + "<li class='cols'><a href=" + element.url + ">" + mayus + "</a></li>";
                             } else {
@@ -122,6 +124,7 @@ function buscartext($event) {
                             if (!select) {
                                 select = "todos"
                             }
+                            //  
                             fnsendajax("/api/buscadorpalabras/guardar", { "palabraBuscada": texto_buscar, "categoriaBuscada": select }, (responses) => {
 
                             })
@@ -156,6 +159,20 @@ function traelaprimera(cadena) {
     //let mayus = element.texto.charAt(0).toUpperCase()+element.texto.slice(1);
 }
 
+
+function geturl(){
+        let texto_buscar = document.getElementById("texto").value;
+        let ulr  =""
+        let select = $("#select").val();
+        if (!texto_buscar) {
+            if (!select) {
+                ulr = '../json/hot.min.json'
+            } else {
+                ulr = '../json/all.min.json'
+            }
+        }
+        return ulr;
+}
 function fnsendajax(url, data, fnok) {
     $.ajax({
         async: true,
